@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Animation</title>
+</head>
+<body>
+
+    <canvas width="600px" height="600px" style="background-color: #ddcccc;" id="lineCanv">
+
+    </canvas>
+    
+    <script>
+        const canv = document.getElementById("lineCanv");
+        const ctx = canv.getContext("2d");
+        const speedMilli = 100;
+        const strokeSize = 10;
+        let x = 0;
+        let y = 0;
+        let myInterval;
+        function drawLinePart() {
+            ctx.beginPath();
+            ctx.moveTo(x - 4,y - 4);
+            x += strokeSize;
+            y += strokeSize;
+            ctx.lineTo(x,y);
+            ctx.lineWidth = 20;
+            ctx.strokeStyle='blue';
+            ctx.stroke();
+            ctx.closePath();
+            // console.log(canv.width);
+            // console.log(canv.height);
+            if(x > canv.width || y > canv.height) {
+                clearInterval(myInterval);
+                alert("Animation finished !");
+            }
+        }
+
+        myInterval = setInterval(drawLinePart, speedMilli);
+        // drawLinePart();
+    </script>
+
+</body>
+</html>

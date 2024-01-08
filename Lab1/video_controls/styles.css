@@ -1,0 +1,38 @@
+#vidSec {
+}
+
+.container {
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 2em 2em 2em 2em;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+#progressBar {
+    grid-column: 1/7;
+
+}
+#playBackRate {
+    grid-column: 1/7;
+}
+
+#volume {
+    grid-column: 1/7;
+}
+
+
+.btn {
+    background-color: orange;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: monospace;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+}

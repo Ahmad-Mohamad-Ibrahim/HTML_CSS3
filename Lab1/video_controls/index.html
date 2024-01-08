@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Controls</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+        <section id="videoSec">
+            <video poster="winter.jpg" src="./frozen.mp4" width="600px" height="400px" id="vid"></video>   
+        </section>
+
+        <section class="container">
+            <progress id="progressBar" min="0" max="100" value="0">
+
+            </progress>
+            <button class="btn" id="play">Play</button>
+            <button class="btn" id="stop">Stop</button>
+            <button class="btn" id="toBegining">&#60;&#60;</button>
+            <button class="btn" id="back5">&#60;</button>
+            <button class="btn" id="forward5">&#62;</button>
+            <button class="btn" id="toEnd">&#62;&#62;</button>
+
+            <label for="playBackRate">Speed</label>
+            <input type="range" min="1" max="100" value="10" class="slider" id="playBackRate">
+            <label for="volume">Volume</label>
+            <input type="range" min="1" max="100" value="50" class="slider" id="volume">
+
+
+        </section>
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
