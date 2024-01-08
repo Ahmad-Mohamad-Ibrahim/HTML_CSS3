@@ -6,6 +6,8 @@ const toBeginingBtn = document.getElementById("toBegining");
 const back5Btn = document.getElementById("back5");
 const forward5Btn = document.getElementById("forward5");
 const toEnd = document.getElementById("toEnd");
+const mute = document.getElementById("mute");
+
 const playBackRateSlider = document.getElementById("playBackRate");
 const volumeSlider = document.getElementById("volume");
 
@@ -51,6 +53,11 @@ forward5Btn.addEventListener("click" , () => {
 toEnd.addEventListener("click" , () => {
     // console.log(video.currentTime);
     video.currentTime = video.duration;
+});
+
+mute.addEventListener("click", () => {
+    volumeSlider.value = 1;
+    video.volume = 0;
 });
 
 playBackRateSlider.onchange = () => {
