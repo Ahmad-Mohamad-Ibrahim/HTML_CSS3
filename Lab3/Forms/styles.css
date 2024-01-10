@@ -1,0 +1,47 @@
+#container {
+    display: grid;
+    margin-top: 240px;
+    grid-template-columns: 50%;
+    margin-left: 25%;
+    row-gap: 1em;
+    
+}
+
+.form-input {
+    padding: 8px;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 9px;
+}
+
+.form-input:focus {
+    border: 2px solid blue;
+}
+
+.form-input:not(:focus):not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+.form-input:not(:focus):not(:placeholder-shown):invalid + #errorDivUser::before {
+    content: "username is atleast 4 characters with no numbers or special characters";
+    color: red;
+    /* background-color: black; */
+}
+
+.form-input:not(:focus):not(:placeholder-shown):invalid + #errorDivAge::before {
+    content: "Age should be above 9 years old";
+    color: red;
+    /* background-color: black; */
+}
+.btn {
+    background-color: rgb(7, 34, 70);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: monospace;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}

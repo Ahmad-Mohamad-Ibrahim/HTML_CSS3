@@ -1,0 +1,19 @@
+#usersCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    margin-left: 25%;
+    row-gap: 1em;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+.big-text {
+    font-size: 20px;
+    border-bottom: 2px solid black;
+}
+
+#removeAll {
+    grid-column: 3/4;
+    background-color: red;
+}
+

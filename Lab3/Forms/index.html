@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="container">
+        <label for="username">Username</label>
+        <input id="username" class="form-input" name="username" type="text" pattern="[a-zA-Z]{4,}" placeholder="username" required>
+        <div id="errorDivUser"></div>
+        <label for="age">Age</label>
+        <input id="age" class="form-input" name="age" type="text" pattern="[1-9]{1}[0-9]{1}" placeholder="age" required>
+        <div id="errorDivAge"></div>
+        <input id="submitBtn" class="btn" type="submit" value="Sign up">  
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
