@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Workers</title>
+</head>
+<body>
+    
+    <script>
+        let w1 = new Worker('w1.js');
+        let w2 = new Worker('w2.js');
+
+        w1.postMessage("1");
+
+
+        w1.onmessage = mssg => {
+            console.log(mssg);
+            alert(mssg.data);
+            document.write(mssg.data + "<br>");
+            w2.postMessage("2");
+        }
+
+
+        w2.onmessage = mssg => {
+            console.log(mssg);
+            alert(mssg.data);
+
+            document.write(mssg.data);
+        }
+
+
+    </script>
+</body>
+</html>

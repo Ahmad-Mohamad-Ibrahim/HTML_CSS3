@@ -1,0 +1,36 @@
+#container {
+    display: grid;
+    margin-top: 240px;
+    grid-template-columns: 50%;
+    margin-left: 25%;
+    row-gap: 1em;
+    
+}
+
+.form-input {
+    padding: 8px;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 9px;
+}
+
+.form-input:focus {
+    border: 2px solid blue;
+}
+
+.form-input:invalid {
+    border: 2px solid red;
+}
+
+.btn {
+    background-color: rgb(7, 34, 70);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: monospace;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
